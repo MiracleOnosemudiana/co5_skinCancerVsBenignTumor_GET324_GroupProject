@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Dataset
+dataset/
+dataset_split/
+HAM10000_images_part_1/
+HAM10000_images_part_2/
+*.csv
+
+# Training outputs
+logs/
+outputs/
+history/
+
+# VS Code
+.vscode/
+
+# Cache
+.cache/
+
+# Archives
+*.zip
+*.tar
+*.gz
