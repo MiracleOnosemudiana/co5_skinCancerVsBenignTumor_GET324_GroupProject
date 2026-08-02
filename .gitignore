@@ -5,7 +5,6 @@ __pycache__/
 
 # Dataset
 dataset/
-dataset_split/
 HAM10000_images_part_1/
 HAM10000_images_part_2/
 *.csv
