@@ -150,25 +150,29 @@ if image is not None:
     with c2:
         st.image(image, width=300)
 
-    with st.spinner("Analyzing image..."):
+    if st.button("Predict"):
 
-        label, confidence, raw = predict(image)
+        with st.spinner("Analyzing image..."):
 
-    st.divider()
+            label, confidence, raw = predict(image)
 
-    st.subheader("Prediction")
+        st.divider()
 
-    if label == "Skin Cancer":
-        st.error(label)
-    else:
-        st.success(label)
+        st.subheader("Prediction")
 
-    st.metric(
-        "Confidence",
-        f"{confidence*100:.2f}%"
-    )
+        if label == "Skin Cancer":
+            st.error(label)
+        else:
+            st.success(label)
 
-    st.progress(confidence)
+        st.metric(
+            "Confidence",
+            f"{confidence*100:.2f}%"
+        )
+
+        st.progress(confidence)
+
+        st.write(f"Probability of Skin Cancer: **{raw:.4f}**")
 
 
 
